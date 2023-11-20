@@ -1,0 +1,248 @@
+/* --------- estilo para zerar os tamanhos padrões dos elementos ----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* --------- estilo para zerar os tamanhos padrões dos elementos ----------- */
+
+
+/* --------- seletor do conteúdo raíz para padronizar modo noturno e modo claro, nesse caso o raíz é noturno ----------- */
+/* --------- aqui também foram criadas variáveis com a utilização dos -- + nome da variavel : e especificação. ----------- */
+/* --------- temos variáveis de cores para a sombra de fundo dos botões, da superficíe, ao posicionar o mouse também ----------- */
+:root {
+  --text-color: white;
+  /*--bg-url: url(./assets/assets/fundo.png);*/
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0,05);
+  --social-link-hover: rgba(255, 255, 255, 0.1);
+  --switch-bg-url: url(./assets/assets/moon-stars.svg);
+}
+
+/* --------- utilizando a classe criada no HTML para o modo claro e editando suas propriedades ----------- */
+/* --------- aqui também foram criadas variáveis com a utilização dos -- + nome da variavel : e especificação. ----------- */
+/* --------- temos variáveis de cores para a sombra de fundo dos botões, da superficíe, ao posicionar o mouse também ----------- */
+.light {
+  --text-color: black;
+  /*--bg-url: url(./assets/assets/bg-mobile-light.jpg);*/
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.50);
+  --social-link-hover: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/assets/sun.svg);
+}
+
+
+
+/* --------- Editando os estilos do CORPO/BODY do HTML colocando imagem de fundo e dando propriedades como não repetir, posição e tamanho ----------- */
+body {
+  /*background-image: url(./assets/assets/fundo_patas.jpg);*/
+  background-image: url(./assets/assets/fundo.png);
+  height: 150vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+
+/* --------- editando propriedades TOTAIS DO BODY o * faz com que todo o resto do corpo tenham essas mesmas definições de tipo de letra e cor ----------- */
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+
+/* --------- utilizando o ID container pra editar o conteudo dele, botando tamanho, borda e margem para definir uma caixa ----------- */
+#container {
+  width: 100%;
+  max-width: 700px;
+
+  border: 1px solid red;
+  margin: auto;
+
+}
+
+
+/* --------- utilizando o ID profile para definir o alinhamento do texto ou conteúdo e o preenchimento ----------- */
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+
+/* --------- utilizando o ID profile com a caracteristica IMG para definir a imagem dentro dessa ID nesse caso só alterei o tamanho ----------- */
+#profile img {
+  width: 112px;
+}
+
+
+/* --------- utilizando o ID profile com a caracteristica P para definir estilos para o paragráfo ----------- */
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+}
+
+
+
+/* --------- css direto na ID switch para definição de margens, borda para visualizaçãoo, posição na tela e tamanho ----------- */
+#switch {
+  margin: 4px auto;
+  margin-bottom: 24px;
+  border: 1px solid red;
+  position: relative;
+  width: 64px;
+  
+}
+
+
+
+/* --------- Editando as carácteristicas do botão como altura e largura, cor do fundo e utilização da varíavel criada com as imagens de sol e lua. ----------- */
+/* --------- também foi editado a posição com o position absolute, top, left, z-index, e transform:translateY. ----------- */
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border-radius: 50%;
+
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  
+  animation: slide-back 0.2s;
+
+
+}
+
+
+/* --------- aqui apenas mostra a posição mudando ao por light ou dark mode ----------- */
+
+.light #switch button {
+
+  animation: slide-in 0.2s forwards;
+}
+
+
+#switch button:hover {
+  outline: 8px solid var(--social-link-hover)
+}
+
+
+
+/* --------- criação da caixa redonda de fundo transparente onde o botão fica para ser arrastado. ----------- */
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+
+
+}
+
+
+
+/* --------- Definindo estilos para a LISTA DESORDENADA, o list-style: none retira a bolinha, enquanto display flex e direction e gap são edições de localização na caixa ----------- */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+
+/* --------- Definindo estilos para a lista ordenada e links  ----------- */
+/* --------- aqui foi criado um botão de seleção, com fundo RGBA (RED GREEN BLUE ALFA definindo as cores e transparência  ----------- */
+/* --------- backdropfilter serve para fazer um blur/borrão no botão e o WEBKIT é uma extensão para funcionar em todos os navegadores  ----------- */
+/* --------- tiramos a decoração padrão dos textos com o one e aumentamos a grossura das letras  ----------- */
+/* --------- Também foi posto uma transição para os efeitos ao por o mouse em cima ter um delay de 0.3 seg  ----------- */
+ul li a {
+  
+  box-shadow: 3px 4px 0px 0px #85704c;
+	background:linear-gradient(to bottom, #ffeecc 5%, #7d6b4a 100%);
+	background-color:#ffeecc;
+	border-radius:5px;
+	border:1px solid #ffeecc;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffeecc;
+}
+  
+/* --------- aqui estamos editando apenas os efeitos ao sobrepor o mouse no botão com o parâmetro HOVER, mudamos apenas a cor e transparência para destacar --------- */
+ul li a:hover {
+  background:linear-gradient(to bottom, #7d6b4a 5%, #ffeecc 100%);
+	background-color:#7d6b4a;
+  /*background:var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);*/
+}
+
+
+ul li a:active {
+position:relative;
+top:1px;
+}
+
+
+/* ---------------editando as margens do texto de introdução--------------------*/
+
+#texto {
+  
+  margin-top: 20px;
+  margin-left: 50px;
+  text-align: justify;
+}
+
+
+/* ---------------editando os icones de redes sociais--------------------*/
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 24px 0;
+
+  font-size: 33.19px;
+}
+
+/* ---------------editando os links dos icones de redes sociais--------------------*/
+#social-links a {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+/* ---------------editando os efeitos de sobreposição nos links dos icones de redes sociais--------------------*/
+#social-links a:hover {
+
+  background: var(--social-link-hover);
+ 
+  border-radius: 50%;
+
+  
+}
+
+
+/* ---------------editando rodapé--------------------*/
+footer {
+
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+
+}

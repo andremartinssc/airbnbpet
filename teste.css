@@ -1,0 +1,146 @@
+/* --------- estilo para zerar os tamanhos padrões dos elementos ----------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* --------- estilo para zerar os tamanhos padrões dos elementos ----------- */
+  
+  
+  /* --------- seletor do conteúdo raíz para padronizar modo noturno e modo claro, nesse caso o raíz é noturno ----------- */
+  /* --------- aqui também foram criadas variáveis com a utilização dos -- + nome da variavel : e especificação. ----------- */
+  /* --------- temos variáveis de cores para a sombra de fundo dos botões, da superficíe, ao posicionar o mouse também ----------- */
+  :root {
+    --text-color: white;
+    /*--bg-url: url(./assets/assets/fundo.png);*/
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0,05);
+    --social-link-hover: rgba(255, 255, 255, 0.1);
+    --switch-bg-url: url(./assets/assets/moon-stars.svg);
+  }
+  
+  /* --------- utilizando a classe criada no HTML para o modo claro e editando suas propriedades ----------- */
+  /* --------- aqui também foram criadas variáveis com a utilização dos -- + nome da variavel : e especificação. ----------- */
+  /* --------- temos variáveis de cores para a sombra de fundo dos botões, da superficíe, ao posicionar o mouse também ----------- */
+  
+  
+  
+  /* --------- Editando os estilos do CORPO/BODY do HTML colocando imagem de fundo e dando propriedades como não repetir, posição e tamanho ----------- */
+  body {
+    background-image: url(./assets/assets/fundo-mobile.png);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+  
+  
+  /* --------- editando propriedades TOTAIS DO BODY o * faz com que todo o resto do corpo tenham essas mesmas definições de tipo de letra e cor ----------- */
+  body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+  }
+  
+  
+  /* --------- utilizando o ID container pra editar o conteudo dele, botando tamanho, borda e margem para definir uma caixa ----------- */
+  #container {
+    width: 100%;
+    max-width: 700px;
+  
+    border: 1px solid red;
+    margin: auto;
+  
+  }
+  
+  
+  /* --------- utilizando o ID profile para definir o alinhamento do texto ou conteúdo e o preenchimento ----------- */
+  #profile {
+    text-align: center;
+    padding: 24px;
+  }
+  
+  
+  /* --------- utilizando o ID profile com a caracteristica IMG para definir a imagem dentro dessa ID nesse caso só alterei o tamanho ----------- */
+  #profile img {
+    width: 112px;
+  }
+  
+  
+  /* --------- utilizando o ID profile com a caracteristica P para definir estilos para o paragráfo ----------- */
+  #profile p {
+    font-weight: 500;
+    line-height: 24px;
+  }
+  
+  #cadastro {
+    
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    
+  
+  }
+  
+  
+  
+  #cadastro form input {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    color: black;
+  }
+  
+  
+  #cadastro button[type="submit"] {
+    border: 1p solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    font-size: 20px;
+    width: 110px;
+    color: rgb(14, 8, 8);
+    margin-left: 200px;
+  }
+  
+  
+  /* ---------------editando as margens do texto de introdução--------------------*/
+  
+  #texto {
+    border: 1px solid red ;
+    margin-top: 20px;
+  
+  }
+  
+  
+  /* ---------------editando os icones de redes sociais--------------------*/
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 24px 0;
+
+  font-size: 33.19px;
+}
+
+/* ---------------editando os links dos icones de redes sociais--------------------*/
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+/* ---------------editando os efeitos de sobreposição nos links dos icones de redes sociais--------------------*/
+#social-links a:hover {
+  background: var(--social-link-hover);
+
+  border-radius: 50%;
+}
+
+/* ---------------editando rodapé--------------------*/
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+

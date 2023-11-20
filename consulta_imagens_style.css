@@ -1,0 +1,268 @@
+body {
+    background-color: #694714c4; /* Cor de fundo marrom claro */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+form {
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"] {
+    width: 10%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+button[type="submit"] {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Cor de fundo do botão quando hover */
+}
+img {
+    width: 200px; /* Tamanho das imagens */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 10px; /* Espaçamento entre as imagens */
+    display: inline-block;
+}
+
+.imagem {
+    display: inline-block;
+    margin-right: 10px; /* Adicione margem direita para espaçamento entre as imagens */
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    gap: 16px;
+    position: absolute;
+    top: 12.5%;
+    left: 25.8%;
+    z-index: 1;
+  }
+  
+  /* --------- Definindo estilos para a lista ordenada e links  ----------- */
+  /* --------- aqui foi criado um botão de seleção, com fundo RGBA (RED GREEN BLUE ALFA definindo as cores e transparência  ----------- */
+  /* --------- backdropfilter serve para fazer um blur/borrão no botão e o WEBKIT é uma extensão para funcionar em todos os navegadores  ----------- */
+  /* --------- tiramos a decoração padrão dos textos com o one e aumentamos a grossura das letras  ----------- */
+  /* --------- Também foi posto uma transição para os efeitos ao por o mouse em cima ter um delay de 0.3 seg  ----------- */
+  ul li  {
+    box-shadow: 3px 4px 0px 0px #85704c;
+    background: linear-gradient(to bottom, #ffeecc 5%, #7d6b4a 100%);
+    background-color: #ffeecc;
+    border-radius: 5px;
+    border: 1px solid #ffeecc;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size:17px;
+    font-weight: bold;
+    padding: 10px 40px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffeecc;
+  
+    /*border: 1px solid var(--stroke-color);
+    padding: 16px 24px;
+    border-radius: 8px;
+  
+    display: flex;
+    justify-content: center;
+    background: var(--surface-color);
+    -webkit-backdrop-filter: blur(4px);
+  
+    text-decoration: none;
+    font-weight: 500;
+  
+    transition: background 0.3s;*/
+  }
+  
+  /* --------- aqui estamos editando apenas os efeitos ao sobrepor o mouse no botão com o parâmetro HOVER, mudamos apenas a cor e transparência para destacar --------- */
+  ul li a:hover {
+    background: linear-gradient(to bottom, #7d6b4a 5%, #ffeecc 100%);
+    background-color: #7d6b4a;
+    /*background:var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);*/
+  }
+  
+  ul li a:active {
+    position: relative;
+    top: 1px;
+  }
+  .imoveis {
+    background-color: rgba(75, 66, 57, 0.575);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.imovel {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.imovel img {
+    width: 200px; /* Largura fixa para todas as imagens */
+    height: 150px; /* Altura fixa para todas as imagens */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1 {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px;
+}
+#profile {
+    text-align: center;
+    padding: 24px;
+  }
+  
+  
+  /* --------- utilizando o ID profile com a caracteristica IMG para definir a imagem dentro dessa ID nesse caso só alterei o tamanho ----------- */
+  #profile img {
+    width: 112px;
+  }
+  
+  
+  /* --------- utilizando o ID profile com a caracteristica P para definir estilos para o paragráfo ----------- */
+  #profile p {
+    font-weight: 500;
+    line-height: 24px;
+  }
+  #cadastro form input {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    color: black;
+  }
+  
+  
+  #cadastro button[type="submit"] {
+    border: 1p solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    font-size: 20px;
+    width: 110px;
+    color: rgb(14, 8, 8);
+    margin-left: 200px;
+  }
+  #container {
+    width: 100%;
+    max-width: 700px;
+  
+    border: 1px solid red;
+    margin: auto;
+  
+  }
+  select {
+    color: black;
+  }
+  option {
+    color: black;
+  }
+  
+.faixa-branca {
+    border: 5px solid #ffffff83;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+/* Adicione este estilo ao seu arquivo consulta_imagens_style.css ou crie um novo arquivo CSS se necessário */
+
+.search-form-container {
+  position: fixed;
+  top: 10px; /* Ajuste conforme necessário para a distância do topo */
+  right: 10px; /* Ajuste conforme necessário para a distância da direita */
+  background-color: rgba(255, 255, 255, 0.281); /* Fundo branco transparente */
+  padding: 10px;
+  z-index: 1000; /* Certifique-se de que a camada está acima de outros elementos */
+}
+
+/* Estilos adicionais conforme necessário */
+.search-form-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.search-form-container input {
+  width: 200px; /* Ajuste conforme necessário */
+  padding: 5px;
+}
+
+.search-form-container button {
+  padding: 5px 10px;
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos adicionais conforme necessário */
+
+.search-form-container-root {
+  position: fixed;
+  top: 125px; /* Ajuste conforme necessário para a distância do topo */
+  left: 10px; /* Ajuste conforme necessário para a distância da direita */
+  /*background-color: rgba(255, 255, 255, 0.281); *//* Fundo branco transparente */
+  padding: 10px;
+  z-index: 1000; /* Certifique-se de que a camada está acima de outros elementos */
+}
+
+/* Estilos adicionais conforme necessário */
+.search-form-container-root label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.search-form-container-root input {
+  width: 200px; /* Ajuste conforme necessário */
+  padding: 5px;
+}
+
+.search-form-container-root button {
+  padding: 5px 10px;
+  background-color: #007BFF; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none;
+  cursor: pointer;
+}
+/* Estilos para o link de âncora */
+a {
+  text-decoration: none; /* Remover sublinhado */
+  color: #ffffff; /* Cor do texto */
+  transition: color 0.3s ease; /* Transição de cor suave */
+}
+
+/* Estilos para o link quando passa o mouse por cima */
+a:hover {
+  color: #f4b836; /* Cor do texto quando hover */
+}
+
+/* Estilos para a lista de navegação */
+nav ul {
+  list-style: none; /* Remover marcadores de lista */
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px; /* Espaçamento entre os itens da lista */
+}
